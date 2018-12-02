@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=awm
+Comment=Alec's Window Manager
+Exec=awm
+Terminal=False
+TryExec=awm
+Type=Application
+
+[Window Manager]
+SessionManaged=true
