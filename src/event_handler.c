@@ -39,7 +39,9 @@ void handle_event(awm_state *state, XEvent *event){
 			/* Enter resize mode */
 			} else if(event->xkey.keycode
 				== XKeysymToKeycode(state->disp, XStringToKeysym("R"))){
-				enter_resize_mode(state, event);
+				if(event->xbutton.subwindow != None){
+					enter_resize_mode(state, event);
+				}
 			/* Close window */
 			} else if(event->xkey.keycode
 				== XKeysymToKeycode(state->disp, XStringToKeysym("Q"))){
